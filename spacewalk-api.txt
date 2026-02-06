@@ -1,0 +1,67 @@
+#!/usr/bin/python
+# Name of script spacewalkapi-kernel-other.py
+# The author of this script Jason Ritzke <jritzke@taos.com>; Michael Garcia <mgarcia@taos.com>
+# This scirpts needs and Satellite/Spacewalk user account with Channel Admin Rights
+# This script need host file prod1.lst
+# This script was created 2016-07-22
+# This script was last modifed 2016-07-22
+# This script is for querying spacewalk-api and comparing running kernel vs availalbe kernel
+# Reference http://spacewalk.redhat.com/documentation/api/
+
+import xmlrpclib
+
+# Package check version on
+PACKAGE = "kernel"
+AUXPACKAGES = ['bash','kernel']
+
+HOSTFILE = 'prod1.lst'
+# Satellite Login Credentials
+SATELLITE_URL = "http://localhost/rpc/api"
+SATELLITE_LOGIN = "swadm"
+SATELLITE_PASSWORD = "T@os2015"
+
+# login client methods
+client = xmlrpclib.Server(SATELLITE_URL, verbose=0)
+key = client.auth.login(SATELLITE_LOGIN, SATELLITE_PASSWORD)
+
+# Retreive the list of system objects
+#systemlist = client.system.listSystems(key)
+hostfile = open(HOSTFILE)
+hostlist = hostfile.read().splitlines()
+systemlist = [item for item in client.system.listSystems(key) if item['name'] in hostlist] 
+
+# Print header for CSV
+print "Hostname,RunningKernel,LastCheckin,OSA_Status,Lastboot,AvailableKernel,ExtraPkgs"
+# Iterate over list of tuples (listLatestAvailablePackage, listSystems)
+for system in zip(
+    client.system.listLatestAvailablePackage(key,
+                                             [item['id'] for item in systemlist],
+                                             PACKAGE),
+    systemlist):
+
+    # Break the tuples out again
+    systempkginfo = system[0]
+    systeminfo = system[1]
+    # Make the names of frequently used keys friendly
+    systemid = systempkginfo['name']
+    systempkg = systempkginfo['package']
+    systemfullpkg = ''.join([systempkg['version'],
+                             '-',
+                             systempkg['release'],
+                             '.',
+                             systempkg['arch']])
+    systemdetails = client.system.getDetails(key, systeminfo['id'])
+    systemkernel = client.system.getRunningKernel(key, systeminfo['id'])
+    # If the full pkgsname does not equal running kernel, print relevant item
+    # fields joined by commas
+    if systemfullpkg != systemkernel:
+	relevantpkgs = ['-'.join([item['name'], item['to_version'], item['to_release']]) for item in client.system.listLatestUpgradablePackages(key, systeminfo['id']) if item['name'] in AUXPACKAGES]
+        print ",".join([systempkginfo['name'],
+                        systemkernel,
+                        str(systeminfo['last_checkin']),
+                        systemdetails['osa_status'],
+                        str(systemdetails['last_boot']),
+                        systemfullpkg,
+			":".join(relevantpkgs)])
+
+client.auth.logout(key)

@@ -1,0 +1,13 @@
+
+  "status": true,
+  "result": {
+    "data_tgz_name": "data_news_topics_20161205T020624.tgz",
+    "data_id": "data_news_topics",
+    "creation_date": "20161203T100624",
+    "data_version": "data_20161205T020624_data_news_topics",
+    "data_digest": "d7296741c1393801b833ee36bcdee350",
+    "source_version": "kg_release_20160509_r33",
+    "seed_version": "seed_20161122",
+    "source_data_version": "seed_vtv: data_20161122T093404_seed_vtv"
+  }
+

@@ -1,0 +1,5 @@
+# ignore the spyder files
+spyder.ini
+spyder.ini.bak
+spyder.lock
+history.py
