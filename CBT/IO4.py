@@ -5,5 +5,5 @@ Prompts for a username and prints a greeting message.
 
 from __future__ import print_function
 
-userName = raw_input('Please enter your username:' )
+userName = input('Please enter your username:' )
 print('Hello', userName + '!')

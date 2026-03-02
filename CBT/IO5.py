@@ -6,8 +6,8 @@ Demonstrates using input functions and basic numeric operations
 
 from __future__ import print_function
 
-userName = raw_input('Please enter your name: ' )
-age = input('Please enter your age: ')
+userName = input('Please enter your name: ' )
+age = int(input('Please enter your age: '))
 
 factor = 2
 finalAge = age + factor
