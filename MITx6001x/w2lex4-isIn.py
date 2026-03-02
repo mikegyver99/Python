@@ -5,6 +5,11 @@ Created on Wed Oct  5 16:21:16 2016
 @author: mgarcial
 """
 
+# Explanation: Contains recursive routines attempting to determine if a
+# character `char` appears in a sorted string `aStr`. Implementation uses
+# helper `isFnd` and a middle-split strategy, though there are logic issues
+# in the original version.
+
 def isIn(char, aStr):
     l = int(len(aStr))
     if l%2 == 0:

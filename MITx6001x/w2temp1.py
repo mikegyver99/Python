@@ -11,5 +11,7 @@ def gcdRecur(a, b):
     
     returns: a positive integer, the greatest common divisor of a & b.
     '''
-    
+    # Explanation: Recursive implementation for computing the greatest
+    # common divisor (GCD) of two positive integers using the Euclidean
+    # algorithm. The function body is currently empty (placeholder).
     

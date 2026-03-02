@@ -8,6 +8,9 @@ test case 1
 """
 count=0
 months=12
+# Explanation: Recursive-style monthly payment printer `mon_payment` that
+# prints remaining balance for each month for `months` iterations; used as
+# a small test/demo of loop and recursion control flow.
 def mon_payment(balance, annualInterestRate, monthlyPaymentRate):
     global months
     global count

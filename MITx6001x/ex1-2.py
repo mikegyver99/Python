@@ -5,6 +5,10 @@ Created on Wed Sep 21 23:03:04 2016
 @author: mgarcial
 """
 
+# Explanation: Demonstrates nested loops and the effect of `break` inside
+# a for-loop; prints iteration counts depending on whether the outer
+# iteration index is even or odd.
+
 iteration = 0
 while iteration < 5:
     count = 0

@@ -14,6 +14,9 @@ test case 1
 """
 count=1
 months=12 
+# Explanation: Test script that iterates monthly payment calculations
+# for 12 months and prints remaining balance — appears to be a copied
+# test-case variant of the polysum/payment exercises.
 while months >= 0:
     if count==13:
         print("Remaining balance:",(round(balance,2)))

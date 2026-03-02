@@ -5,6 +5,9 @@ Created on Wed Sep 21 22:29:38 2016
 @author: mgarcial
 """
 
+# Explanation: Prompts for an integer and attempts to find its integer
+# square root by incrementing `ans`; reports whether `x` is a perfect square.
+
 ans = 0
 neg_flag = False
 x = int(input("Enter an integer: "))

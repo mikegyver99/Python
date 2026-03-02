@@ -4,6 +4,9 @@ Spyder Editor
 
 This is a temporary script file.
 """
+
+# Explanation: Iterates over a string `school` to count vowels and consonants,
+# demonstrating character checks and simple conditional logic.
 school = 'Massachusetts Institute of Technology'
 numVowels = 0
 numCons = 0

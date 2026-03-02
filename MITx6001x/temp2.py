@@ -5,6 +5,10 @@ Created on Thu Sep 22 21:27:44 2016
 @author: mgarcial
 """
 
+# Explanation: Implements a binary search (bisection) method to approximate
+# the square root of `x` within `epsilon`. Note: `low` and `high` are used
+# before assignment in this version, so the script contains ordering bugs.
+
 x = 81
 epsilon = 0.01
 guess = (low + high)/2.0

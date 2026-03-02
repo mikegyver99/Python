@@ -5,6 +5,10 @@ Created on Sun Sep 25 21:10:07 2016
 @author: mgarcial
 """
 
+# Explanation: Contains several small functions illustrating scope rules
+# in Python (`f`, `g`, `h`) and how local/global `x` behave when accessed
+# or modified inside functions. Some calls will raise UnboundLocalError.
+
 def f(y):
     x = 1
     x += 1

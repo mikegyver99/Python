@@ -4,6 +4,8 @@ Created on Thu Sep 15 22:01:19 2016
 
 @author: mgarcial
 """
+# Explanation: Counts the number of times the substring 'bob' appears in `s`
+# by checking slices `s[i:i+3]` while iterating through the string.
 s = 'bobnbobnbob'
 i = 0
 numBobs = 0

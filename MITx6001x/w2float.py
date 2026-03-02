@@ -5,6 +5,9 @@ Created on Sun Sep 25 11:20:25 2016
 @author: mgarcial
 """
 
+# Explanation: Converts a (positive or negative) integer `num` into its
+# binary string representation, handling zero and negative sign.
+
 num = 100
 
 if num < 0 :

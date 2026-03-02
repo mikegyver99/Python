@@ -4,6 +4,10 @@ Created on Fri Sep 23 22:30:50 2016
 
 @author: mgarcial
 """
+ 
+# Explanation: Implements a number-guessing game using binary search
+# (the program asks the user whether the guess is too high, too low,
+# or correct, and adjusts bounds until it guesses the secret number).
 print("Please think of a number between 0 and 100!")
 high = 100
 low = 0

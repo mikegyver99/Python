@@ -5,6 +5,10 @@ Created on Wed Sep 21 23:34:00 2016
 @author: mgarcial
 """
 
+# Explanation: Attempts to find the cube root of `cube` using an incremental
+# search (with `increment`) while counting guesses. Note: the loop
+# condition and final `if` appear incorrect and the script is incomplete.
+
 cube = 8
 epsilon = 0.01
 guess = 0.0

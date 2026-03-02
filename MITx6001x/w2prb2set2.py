@@ -16,6 +16,9 @@ Find minimum monthly payment with 12 month payoff
 mybalance=balance
 mypayment=0
 
+# Explanation: Iterative search for the minimum fixed monthly payment
+# (in increments of 10) that will pay off `balance` within 12 months.
+
 while mybalance > 0:
     #set payment +10
     mypayment += 10

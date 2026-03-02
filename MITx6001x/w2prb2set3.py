@@ -15,6 +15,8 @@ Find minimum monthly payment with 12 month payoff
 """
 prevBalance = balance
 monthIntRate = annualInterestRate / 12.0
+# Explanation: Uses bisection search to compute the minimum monthly payment
+# that pays off `balance` within 12 months to within a small tolerance.
 count =0 # will count months
 lowBound = balance/12.0
 upBound = (balance *((1+ monthIntRate)**12))/12.0

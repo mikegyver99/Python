@@ -10,6 +10,9 @@ annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
 count=1
 months=12 
+# Explanation: Non-functional test case that simulates 12 monthly payments
+# on a balance, printing or computing the remaining balance by iterating
+# months and updating `balance` using the monthly payment rate.
 while months >= 0:
     if count==13:
         print("Remaining balance:",(round(balance,2)))

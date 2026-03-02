@@ -5,6 +5,9 @@ Created on Thu Sep 15 21:14:04 2016
 @author: mgarcial
 """
 
+# Explanation: Prompts for an integer and checks whether it is a perfect cube
+# by incrementing ans until ans**3 >= x; reports the cube root if exact.
+
 x = int(input("Enter an interger: "))
 
 ans = 0

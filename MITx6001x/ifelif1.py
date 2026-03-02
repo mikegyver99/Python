@@ -5,6 +5,9 @@ Spyder Editor
 This is a temporary script file.
 """
 
+# Explanation: Reads an integer from input and prints whether it is
+# divisible by 2 and/or 3, demonstrating nested conditionals.
+
 x = int(input('Enter an integer: '))
 if x%2 == 0:
     if x%3 == 0:

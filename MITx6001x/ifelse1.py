@@ -5,6 +5,9 @@ Spyder Editor
 This is a temporary script file.
 """
 
+# Explanation: Prompts for an integer and reports divisibility by 2 and/or 3
+# using nested if/elif branches.
+
 x = int(input('Enter an integer: '))
 if x%2 == 0:
     if x%3 == 0:

@@ -4,6 +4,9 @@ Created on Thu Sep 15 23:29:39 2016
 
 @author: mgarcial
 """
+# Explanation: Finds the longest substring of `s` in which the letters
+# appear in alphabetical order and prints it. Iterates and compares
+# adjacent characters to build candidate substrings.
 s = 'rjrwffoqjjn'
 i = 0
 j = 1
