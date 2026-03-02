@@ -1,3 +1,9 @@
+"""I/O example: read name and age, perform simple arithmetic.
+
+Demonstrates using input functions and basic numeric operations
+(addition, multiplication, division) on the provided age.
+"""
+
 from __future__ import print_function
 
 userName = raw_input('Please enter your name: ' )

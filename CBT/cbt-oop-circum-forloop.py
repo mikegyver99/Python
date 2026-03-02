@@ -1,3 +1,10 @@
+"""Generate random circles and print radius with circumference.
+
+Defines a simple Circle placeholder class and a helper to
+calculate circumference; populates a list of circles with
+random radii and prints each circle's radius and circumference.
+"""
+
 from __future__ import print_function
 import math,random
 
