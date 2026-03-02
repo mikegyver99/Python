@@ -1,7 +1,7 @@
 from __future__ import print_function
 
-name = raw_input('Please tell me your name: ')
-rawAge = raw_input('Please tell me your age: ')
+name = input('Please tell me your name: ')
+rawAge = input('Please tell me your age: ')
 age = int(rawAge)
 
 if age >= 21:

@@ -6,7 +6,7 @@ and drink-permission messages based on the age provided.
 
 from __future__ import print_function
 
-name = raw_input('Please tell me your name: ')
+name = input('Please tell me your name: ')
 rawAge = input('Please tell me your age: ')
 age = int(rawAge)
 
