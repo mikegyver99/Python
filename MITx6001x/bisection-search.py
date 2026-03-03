@@ -11,9 +11,9 @@ Created on Thu Sep 22 21:27:44 2016
 
 x = 81
 epsilon = 0.01
-guess = (low + high)/2.0
 low = 1.0
 high = x
+guess = (low + high)/2.0
 num_guess = 0
 
 while abs(guess**2 - x) >= epsilon:
