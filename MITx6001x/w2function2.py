@@ -12,20 +12,27 @@ Created on Sun Sep 25 21:10:07 2016
 def f(y):
     x = 1
     x += 1
-    print(x)
+    print('f: local x =', x)
 x = 5
 f(x)
-print(x)
+print('module: global x =', x)
 
 def g(y):
-    print(x)
-    print(x + 1)
+    print('g: global x =', x)
+    print('g: computed x+1 (uses global) =', x + 1)
 x = 5
 g(x)
-print(x)
+print('module: global x =', x)
 
 def h(y):
-    x = x + 1
+    """Return y incremented by one and show local value.
+
+    Prints the local parameter value then returns the incremented
+    result so the caller can update the global if desired.
+    """
+    print('h: local y =', y)
+    return y + 1
+
 x = 5
-h(x)
-print(x)
+x = h(x)
+print('module: global x =', x)
