@@ -11,7 +11,7 @@ Created on Thu Sep 22 21:27:44 2016
 # guess is close enough to the actual square root. 
 # It also counts the number of guesses made to reach the approximation.
 
-x = 81
+x = 144
 epsilon = 0.01
 low = 1.0
 high = x
