@@ -1,7 +1,7 @@
 import time
 
 class RateLimiter:
-    def __init__(self, max_requests=10, time_window=60):
+    def __init__(self, max_requests, time_window):
         self.max_requests = max_requests
         self.time_window = time_window
         self.requests = {}  # This was missing in the original code
@@ -25,7 +25,7 @@ class RateLimiter:
 
 # Example usage
 if __name__ == "__main__": #  added this to prevent code from running if imported as a module
-    rate_limiter = RateLimiter()
+    rate_limiter = RateLimiter(10, 60)
     ip_address = "10.10.10.10"
     for i in range(12):
         if rate_limiter.is_allowed(ip_address):
